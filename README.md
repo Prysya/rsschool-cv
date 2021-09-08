@@ -1,1 +1,1 @@
-https://prysya.github.io/rsschool-cv/cv
+https://prysya.github.io/rsschool-cv/
