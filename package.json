@@ -1,0 +1,26 @@
+{
+  "name": "rsschool-cv",
+  "version": "1.0.0",
+  "description": "https://prysya.github.io/rsschool-cv/cv",
+  "main": "index.js",
+  "scripts": {
+    "test": "htmlhint ./*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prysya/rsschool-cv.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prysya/rsschool-cv/issues"
+  },
+  "homepage": "https://github.com/Prysya/rsschool-cv#readme",
+  "devDependencies": {
+    "htmlhint": "^0.15.1",
+    "stylelint-config-htmlacademy": "^0.1.10"
+  },
+  "dependencies": {
+    "prettier": "^2.3.2"
+  }
+}
