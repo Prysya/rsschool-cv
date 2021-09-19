@@ -7,7 +7,7 @@ const handleHtmlOverflow = () => {
     return (html.style.overflow = "hidden");
   }
   return (html.style.overflow = "auto");
-}
+};
 
 const handleItemClick = (event) => {
   if (event.target.className === "nav__link link") {
@@ -18,3 +18,5 @@ const handleItemClick = (event) => {
 
 nav.addEventListener("click", handleItemClick);
 menuButton.addEventListener("change", handleHtmlOverflow);
+
+console.log("Баллы за CV: 150 / 150");
