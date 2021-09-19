@@ -65,7 +65,7 @@ function decipherThis(str) {
   * React-developer
 * **Udemy**
   * The Web Developer Bootcamp
-  * React Native (in process...)
+  * React Native (in progress...)
 * **freeCodeCamp**
   * Responsive Web Design
   * JavaScript Algorithms and Data Structures 
@@ -73,4 +73,4 @@ function decipherThis(str) {
 ## Languages
 
 * **Russian** - Native speaker
-* **English** - A2+ (B1 in process…)
+* **English** - A2+ (B1 in progress…)

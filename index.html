@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
     <title>rs-school cv</title>
     <link href="styles.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,16 +12,43 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
+    />
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </head>
-  <body class="body">
+  <body class="body" data-simplebar data-simplebar-auto-hide="false">
     <div class="wrapper">
-      <header class="header flex-container flex-container_align_center">
+      <header class="header flex-container flex-container_align_stretch">
         <div class="header__grid-item">
-          <h1 class="header__title">Stanislav Stakhovskiy</h1>
-          <p class="header__subtitle">Software engineer</p>
-          <p class="header__place">
-            <img class="icon_large" src="./images/tag.png" alt="tag" /> Moscow
-          </p>
+            <input class='header__menu-btn-toggle' id="menu-toggle" type="checkbox" />
+            <label class="header__menu-btn-label" for="menu-toggle">
+              <span></span>
+            </label>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item"><a href="#summary" class="nav__link link">Summary</a></li>
+              <li class="nav__item"><a href="#education" class="nav__link link">Education</a></li>
+              <li class="nav__item"><a href="#frontendProjects" class="nav__link link">My&nbsp;Projects</a></li>
+              <li class="nav__item"><a href="#code-example" class="nav__link link">Code&nbsp;example</a></li>
+              <li class="nav__item"><a href="#contacts" class="nav__link link">Contacts</a></li>
+              <li class="nav__item"><a href="#skills" class="nav__link link">Skills</a></li>
+              <li class="nav__item"><a href="#contacts" class="nav__link link">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="header__about">
+            <h1 class="header__title">Stanislav Stakhovskiy</h1>
+            <p class="header__subtitle">Software engineer</p>
+            <p class="header__place">
+              <img class="icon_large" src="./images/tag.png" alt="tag" /> Moscow
+            </p>
+          </div>
+
         </div>
         <div class="header__grid-item">
           <img class="header__avatar" src="./images/avatar.png" alt="avatar" />
@@ -29,7 +58,7 @@
       <main class="main flex-container flex-container_align_stretch">
         <section class="column column_size-large">
           <div class="summary-container">
-            <h2 class="summary-container__header">Summary</h2>
+            <h2 class="summary-container__header" id="summary">Summary</h2>
             <hr class="line" />
             <p class="summary-container__text">
               Let me introduce myself, my name is Stas, I'm 26 years old, I'm
@@ -57,7 +86,7 @@
           </div>
 
           <div class="summary-container">
-            <h2 class="summary-container__header">Education</h2>
+            <h2 class="summary-container__header" id="education">Education</h2>
             <hr class="line" />
             <ul class="summary-container__text">
               <li class="list-item__title">
@@ -82,7 +111,7 @@
                 Udemy
                 <ul>
                   <li class="list-item__content">The Web Developer Bootcamp</li>
-                  <li class="list-item__content">React Native (in process…)</li>
+                  <li class="list-item__content">React Native (in progress…)</li>
                 </ul>
               </li>
 
@@ -99,7 +128,64 @@
           </div>
 
           <div class="summary-container">
-            <h2 class="summary-container__header">Code example</h2>
+            <h2 class="summary-container__header" id="frontendProjects">My projects</h2>
+            <hr class="line" />
+            <ul class="projects-container">
+              <li class="projects-container__item">
+                <a class="projects-container__link" href="https://github.com/Prysya/news-explorer" target="_blank">
+                  <figure class="projects-container__figure">
+                    <img class="projects-container__image" src="https://camo.githubusercontent.com/006114487fc743685bbf749ed5cb252ea40805e1e7009381c12a6d1f716a6eb0/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f7072797379612f696d6167652f75706c6f61642f76313630333133303836342f6e6577732d6578706c6f7265722d6c6f676f325f74796f7031752e706e67" alt="News-explorer project logo">
+                    <figcaption class="projects-container__caption">
+                      News explorer
+                    </figcaption>
+                  </figure>
+                  <p class='projects-container__about'>
+                    A service where peoples can search and save news to personal page.
+                    <br/>
+                    <b>Technologies:</b> HTML, JS, CSS, BEM, Webpack
+                  </p>
+                </a>
+              </li>
+
+              <li class="projects-container__item">
+                <a class="projects-container__link" href="https://github.com/Prysya/mesto" target="_blank">
+                  <figure class="projects-container__figure">
+                    <img class="projects-container__image"  src="https://camo.githubusercontent.com/a3ee97f6da278169a6a5c9937e2759d10cceb6181475e5ee4d88c83cae1bd60b/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f7072797379612f696d6167652f75706c6f61642f76313538363433343535302f6c6f676f5f6264736476782e737667" alt="Mesto project logo">
+                    <figcaption class="projects-container__caption">
+                      Mesto
+                    </figcaption>
+                  </figure>
+                  <p class='projects-container__about'>
+                    A service where peoples can share photos of interesting places.
+                    <br/>
+                    <b>Technologies:</b> HTML, JS, CSS, BEM, Webpack
+                  </p>
+                </a>
+              </li>
+
+              <li class="projects-container__item">
+                <a class="projects-container__link" href="https://github.com/Prysya/react-burger" target="_blank">
+                  <figure class="projects-container__figure">
+                    <img class="projects-container__image"  src="https://res.cloudinary.com/prysya/image/upload/v1632076759/Screenshot_2021-09-19_213856_vaoqff.png" alt="React-burger project logo">
+                    <figcaption class="projects-container__caption">
+                      React-Burger
+                    </figcaption>
+                  </figure>
+                  <p class='projects-container__about'>
+                    A service where all cosmic creatures in the universe can make a burger from different ingredients.
+                    All orders have a real-time tracking. Also, a customer can see an own completed orders.
+                    <br/>
+                    <b>Technologies:</b> Typescript, React, Redux-toolkit, React-router-dom,  Websocket, React-DnD, axios, yup, Cypress, jest
+                  </p>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+
+          <div class="summary-container">
+            <h2 class="summary-container__header" id="code-example">Code example</h2>
             <hr class="line" />
             <a
               class="link"
@@ -108,14 +194,17 @@
             >
               Codewars “Turn String Input into Hash” cata
             </a>
-            <pre class="code-container"><code>
-const strToHash = (str) => str === ""
-  ? {}
-  : str
-    .split(", ")
-    .map(item => item.split("="))
-    .reduce((acc, item) =>
-      ({...acc, [item[0]]: Number(item[1])}), {});
+            <pre class="code-container"><code class="language-">
+const strToHash = (str) =>
+  str === ''
+    ? {}
+    : str
+        .split(', ')
+        .map((item) => item.split('='))
+        .reduce(
+          (acc, item) => ({...acc, [item[0]]: Number(item[1])}),
+          {}
+        );
             </code></pre>
 
             <a
@@ -128,24 +217,22 @@ const strToHash = (str) => str === ""
             <pre class="code-container"><code>
 const decipherThis = (str) =>
   str
-    .split(" ")
+    .split(' ')
     .map((item) =>
       item
-        .replace(/([a-z])([a-z]*)?([a-z])/i,
-              (match, p1, p2, p3) =>
+        .replace(/([a-z])([a-z]*)?([a-z])/i, (match, p1, p2, p3) =>
           p2 ? `${p3}${p2}${p1}` : `${p3}${p1}`
         )
-        .replace(/\d+/g, (match) =>
-              String.fromCharCode(+match))
+        .replace(/\d+/g, (match) => String.fromCharCode(+match))
     )
-    .join(" ");
+    .join(' ');
             </code></pre>
           </div>
         </section>
         <div class="vertical-line"></div>
         <section class="column column_size-small">
           <div class="summary-container">
-            <h2 class="summary-container__header">Contacts</h2>
+            <h2 class="summary-container__header" id="contacts">Contacts</h2>
             <hr class="line" />
             <p class="summary-container__contacts">
               <img
@@ -188,7 +275,7 @@ const decipherThis = (str) =>
           </div>
 
           <div class="summary-container">
-            <h2 class="summary-container__header">Skills</h2>
+            <h2 class="summary-container__header" id="skills">Skills</h2>
             <hr class="line" />
             <ul class="summary-container__text">
               <li class="list-item__title">JavaScript</li>
@@ -205,19 +292,19 @@ const decipherThis = (str) =>
           </div>
 
           <div class="summary-container">
-            <h2 class="summary-container__header">Languages</h2>
+            <h2 class="summary-container__header" id="languages">Languages</h2>
             <hr class="line" />
             <p class="summary-container__text">
               <span class="list-item__title">Russian</span> - Native speaker
             </p>
             <p class="summary-container__text">
               <span class="list-item__title">English</span> - A2+ (B1 in
-              process…)
+              progress…)
             </p>
           </div>
         </section>
       </main>
-      <footer class="flex-container flex-container_align_center">
+      <footer class="footer flex-container flex-container_align_center">
         <a class="link" href="https://github.com/Prysya"><img src="./images/github_black.png" alt="My GitHub"/></a>
         <p>© 2021</p>
         <a href="https://rs.school/js/" target="_blank"
@@ -434,5 +521,7 @@ const decipherThis = (str) =>
         ></a>
       </footer>
     </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>
