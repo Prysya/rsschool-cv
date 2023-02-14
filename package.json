@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/Prysya/rsschool-cv#readme",
   "devDependencies": {
-    "htmlhint": "^0.15.1",
+    "htmlhint": "^1.1.4",
     "stylelint-config-htmlacademy": "^0.1.10"
   },
   "dependencies": {
